@@ -10,10 +10,10 @@ module.exports = {
     port: 8080
   },
   devtool: 'eval-source-map',
-  entry: process.cwd()+'/src/app.js',
+  entry: process.cwd()+'/src/js/main.js',
   output: {
     path: process.cwd()+'/dist',
-    filename: 'js/app.js'
+    filename: 'scripts.min.js'
   },
   resolve: {
     extensions: ['.js']

@@ -16,10 +16,10 @@ else {
 
 module.exports = {
   mode: 'production',
-  entry: process.cwd()+'/src/app.js',
+  entry: process.cwd()+'/src/js/main.js',
   output: {
     path: process.cwd()+'/dist',
-    filename: 'js/app.js'
+    filename: 'scripts.min.js'
   },
   resolve: {
     extensions: ['.js']
@@ -44,7 +44,11 @@ module.exports = {
       {
         test: /\.(png|jpg|gif)$/,
         use: [{
-          loader: 'file-loader'
+          loader: 'file-loader',
+          options: {
+            outputPath: 'images',
+            name: '[name].[ext]'
+          }
         }]
       }
     ]
@@ -64,7 +68,15 @@ module.exports = {
         secretAccessKey: s3DeployConfig.secretAccessKey
       },
       s3UploadOptions: {
-        Bucket: s3DeployConfig.bucket
+        Bucket: s3DeployConfig.bucket,
+        CacheControl(fileName) {
+          if (/\.png/.test(fileName)) {
+            return 'max-age=172800'
+          }
+          else if (/\.js/.test(fileName)) {
+            return 'max-age=172800'
+          }
+        }
       }
     })
   ]
