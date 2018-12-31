@@ -1,0 +1,37 @@
+
+@import 'base/normalize';
+@import 'base/colors';
+@import 'base/mixins';
+
+@import 'components/sidebar';
+@import 'components/section';
+
+body {
+  background-color: $md-grey-50;
+  font-family: 'Roboto';
+  color: $md-grey-900;
+  font-size: 18px;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul {
+  padding: 0;
+  margin: 0;
+
+  li {
+    list-style: none;
+  }
+}
+
+#main_wrapper {
+
+  @include transition(opacity 0.15s ease-in)
+}
+
+#main_content {
+  padding-left: $space * 24;
+}

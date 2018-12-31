@@ -1,0 +1,42 @@
+{
+  "name": "portfolio",
+  "version": "1.0.0",
+  "description": "Portfolio mindelis.com",
+  "main": "GruntFile.js",
+  "scripts": {
+    "start": "webpack-dev-server",
+    "dev": "webpack-dev-server --config webpack/webpack.dev.js",
+    "build": "rimraf dist && webpack --config webpack/webpack.build.js --progress",
+    "deploy": "rimraf dist && webpack --config webpack/webpack.deploy.js --progress",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MindeVieras/portfolio.git"
+  },
+  "author": "Minde Vieras",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MindeVieras/portfolio/issues"
+  },
+  "homepage": "https://github.com/MindeVieras/portfolio#readme",
+  "dependencies": {
+    "webfontloader": "^1.6.28"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.2.2",
+    "@babel/preset-env": "^7.2.3",
+    "babel-loader": "^8.0.4",
+    "css-loader": "^2.1.0",
+    "file-loader": "^3.0.1",
+    "html-webpack-plugin": "^3.2.0",
+    "node-sass": "^4.11.0",
+    "rimraf": "^2.6.2",
+    "sass-loader": "^7.1.0",
+    "style-loader": "^0.23.1",
+    "webpack": "^4.28.3",
+    "webpack-cli": "^3.1.2",
+    "webpack-dev-server": "^3.1.14",
+    "webpack-s3-plugin": "^1.0.3"
+  }
+}
