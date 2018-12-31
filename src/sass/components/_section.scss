@@ -2,10 +2,17 @@
 .main-section {
   
   .section-title {
+    background-color: $md-teal-600;
+    font-size: 28px;
+    font-weight: 300;
+    color: $white;
     margin: 0;
+    padding: $space * 3;
+    text-transform: uppercase;
+    letter-spacing: 2px;
   }
 
   .section-content {
-    margin: 0 $space * 3;
+    margin: $space * 5 $space * 3;
   }
 }
