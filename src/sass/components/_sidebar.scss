@@ -5,35 +5,38 @@
   top: 0;
   bottom: 0;
   left: 0;
-  width: $space * 24;
+  width: $space * 25;
   height: 100%;
   box-shadow: 0 2px 5px 0 rgba(0,0,0,0.16), 0 2px 10px 0 rgba(0,0,0,0.12);
 
   header {
     background-color: $md-grey-50;
     border-bottom: 1px solid #ddd;
-    display: flex;
-    flex-direction: column;
-    padding: 24px;
-    text-align: center;
-
-    .name {
-      font-size: 20px;
-      margin-top: $space;
-    }
+    padding: $space * 3 $space * 2;
     
     .slogan {
+      display: inline-block;
       font-size: 15px;
-      margin-top: $space / 2;
+      margin-top: $space;
+      width: 100%;
+      color: $md-grey-600;
     }
   }
 
   .logo-wrapper {
-    padding: 0 $space * 2;
+    display: flex;
+    align-items: center;
 
     .logo {
-      width: 100%;
+      width: $space * 8;
       height: auto;
+    }
+    
+    .name {
+      font-size: 21px;
+      margin-left: $space * 2;
+      line-height: 1.2;
+      letter-spacing: 2px;
     }
   }
 

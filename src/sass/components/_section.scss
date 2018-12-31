@@ -9,10 +9,15 @@
     margin: 0;
     padding: $space * 3;
     text-transform: uppercase;
-    letter-spacing: 2px;
+    letter-spacing: 4px;
   }
 
   .section-content {
     margin: $space * 5 $space * 3;
+  }
+
+  &#about_section {
+    font-size: 22px;
+    line-height: 1.75;
   }
 }
