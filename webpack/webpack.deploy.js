@@ -2,6 +2,7 @@
 var path = require('path')
 var webpack = require('webpack')
 var HtmlWebpackPlugin = require('html-webpack-plugin')
+const CopyWebpackPlugin = require('copy-webpack-plugin')
 var S3Plugin = require('webpack-s3-plugin')
 var fs = require('fs')
 
@@ -61,6 +62,13 @@ module.exports = {
         collapseWhitespace: true
       }
     }),
+    new CopyWebpackPlugin([
+      {
+        from: process.cwd()+'/src/favicons/**/*',
+        to: process.cwd()+'/dist/favicons/',
+        flatten: true
+      }
+    ]),
     new S3Plugin({
       s3Options: {
         region: s3DeployConfig.region,

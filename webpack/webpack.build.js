@@ -1,6 +1,7 @@
 
 var webpack = require('webpack')
 var HtmlWebpackPlugin = require('html-webpack-plugin')
+const CopyWebpackPlugin = require('copy-webpack-plugin')
 
 module.exports = {
   mode: 'production',
@@ -49,6 +50,13 @@ module.exports = {
       minify: {
         collapseWhitespace: true
       }
-    })
+    }),
+    new CopyWebpackPlugin([
+      {
+        from: process.cwd()+'/src/favicons/**/*',
+        to: process.cwd()+'/dist/favicons/',
+        flatten: true
+      }
+    ])
   ]
 };
