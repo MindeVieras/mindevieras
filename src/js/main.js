@@ -11,7 +11,7 @@ import '../sass/main.scss'
 // Load fonts
 WebFont.load({
   google: {
-    families: ['Roboto:100,300,400,500,700,900', 'Dosis']
+    families: ['Roboto:100,300,400,500,700,900']
   },
   active: () => {
     // Once fonts are loaded, run the rest
