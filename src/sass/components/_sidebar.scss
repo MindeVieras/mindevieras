@@ -41,6 +41,14 @@
   }
 
   #main_navigation {
-    padding: $space $space * 3;
+    
+    .menu-link {
+      display: flex;
+      padding: $space / 2 $space * 2;
+
+      &.active {
+        color: red;
+      }
+    }
   }
 }
