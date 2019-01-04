@@ -53,9 +53,9 @@ module.exports = {
     }),
     new CopyWebpackPlugin([
       {
-        from: process.cwd()+'/src/favicons/**/*',
-        to: process.cwd()+'/dist/favicons/',
-        flatten: true
+        from: process.cwd()+'/src/images',
+        to: process.cwd()+'/dist/images',
+        flatten: false
       }
     ])
   ]
