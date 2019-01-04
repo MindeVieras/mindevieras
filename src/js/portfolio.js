@@ -10,7 +10,7 @@ export default class Portfolio {
     // Set initial variables
     this.mainWrapper = document.getElementById('main_wrapper')
     this.menuList = document.getElementById('main_navigation')
-    this.menuItems = this.menuList.querySelectorAll('.menu-link')
+    this.menuItems = document.querySelectorAll('.menu-link')
     this.sections = document.querySelectorAll('#main_content .main-section')
     this.scrollOffset = window.innerHeight / 2
     
@@ -48,7 +48,7 @@ export default class Portfolio {
     e.preventDefault()
     
     const href = this.getAttribute('href')
-    if(href) {
+    if (href) {
       scrollToElement(href, {
         offset: 0,
         duration: 750

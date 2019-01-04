@@ -1,5 +1,7 @@
 
 .main-section {
+  display: inline-block;
+  width: 100%;
   min-height: 100vh;
   
   .section-title {
@@ -17,8 +19,16 @@
     margin: $space * 5 $space * 3;
   }
 
-  &#about_section {
-    font-size: 22px;
-    line-height: 1.75;
-  }
+}
+
+#hero_section {
+  background-image: url('/images/hero.jpg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+#about_section {
+  font-size: 22px;
+  line-height: 1.75;
 }
