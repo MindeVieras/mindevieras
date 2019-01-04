@@ -24,8 +24,6 @@ export default class Portfolio {
 
   init() {
     this.loadFonts()
-    this.setInitialOpacity()
-    this.onScroll()
   }
 
   // Load fonts
@@ -33,6 +31,11 @@ export default class Portfolio {
     WebFont.load({
       google: {
         families: ['Roboto:100,300,400,500,700,900']
+      },
+      active: () => {
+        // Do the rest once fonts are loaded
+        this.setInitialOpacity()
+        this.onScroll()
       }
     })
   }
